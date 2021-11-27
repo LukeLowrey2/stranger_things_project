@@ -27,7 +27,13 @@ const App = () => {
 
     return (
         <div classname = 'main-view'>
-            Placeholder
+            {
+                posts.map((posts) => <div key={posts.id}>
+                    <h3>{posts.title}</h3>
+                    <div>{posts.description}</div>
+                    <div>{posts.price}</div>
+                </div>)
+            }
         </div>
     )
 
