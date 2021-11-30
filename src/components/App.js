@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link, Switch } from 'react-router-dom';
-import {fetchPosts} from '../api/index';
+import { fetchPosts } from '../api/index';
 import PostView from './PostsView';
 import LogInForm from './LogInForm';
 import NewPostForm from './NewPostForm';
@@ -9,31 +9,38 @@ import NewPostForm from './NewPostForm';
 const App = () => {
 
     return (
-    
-    // <div /*class='nav-bar'*/> 
-    //     <div>
-    //         <button><Link to="/">Home</Link></button>
+        <div>
 
-    //         <button><Link to="/login">Log In</Link></button>
+          <div class='header'>
 
-    //         <button><Link to="/newpost">New Post</Link></button>
-                /*only if there a local source token */
-    //     </div>
-    // </div>
+                <div>
+                    <div class='page-name'>Stranger's Things</div>
+                </div>
 
-    // <Switch>
-    //     <Route exact path = "/" component = {App}/>
+                    <div class='navigation-bar'>
+                    <button><Link to="/" class='nav-buttons'>Home</Link></button>
 
-    //     <Route path = "/login" component = {LogInForm}/>
+                    <button><Link to="/LogInForm" class='nav-buttons'>Log In</Link></button>
 
-    //     <Route path = "/newpost" component = {NewPost}/>
-    // </Switch>
+                    <button><Link to="/NewPostForm" class='nav-buttons'>New Post</Link></button>
+                            {/* only if there a local source token  */}
+                    </div>
+          </div>
 
+            {/* <Switch>
+                <Route exact path="/" component={App} />
 
+                <Route path="/LogInForm" component={LogInForm} />
 
-    <div>
-        <PostView />
-    </div>
+                <Route path="/NewPostForm" component={NewPostForm} />
+            </Switch> */}
+            
+
+            <div class='main' >
+                <PostView />
+            </div>
+        </div>
+
     )
 
 };

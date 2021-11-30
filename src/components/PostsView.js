@@ -25,11 +25,12 @@ const PostView = () => {
     }
 
     return (
-        <div classname = 'main-view'>
+        <div class='posts-section' >
             {
-                posts.map((posts) => <div key={posts.id}>
+                posts.map((posts) => <div key={posts.id} class='post'  >
                     <h3>{posts.title}</h3>
                     <div>{posts.description}</div>
+                    <br></br>
                     <div>{posts.price}</div>
                 </div>)
             }
