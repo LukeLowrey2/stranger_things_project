@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import {fetchPosts} from '../api/index';
+import SinglePostView from './SinglePostView';
 
 const PostView = () => {
 
@@ -10,29 +11,27 @@ const PostView = () => {
 
     useEffect( async () => {
     const thePosts = await fetchPosts();
-    console.log('this is the post variable', thePosts);
+    // console.log('this is the post variable', thePosts);
     setPosts(thePosts.data.posts)
     })
 
     let postElements = null;
 
     if( posts && posts.length ) {
-        postElements = <div>
+        postElements = <div class='posts-section'>
             {
-                posts.map((posts) => <div key={posts.id}>{posts.title}</div>)
+                posts.map((post) => /*<div key={posts.id} className='post'>{posts.title}</div>*/
+                <SinglePostView key={post._id} post={post} />
+                )
+                
             }
         </div>
     }
 
     return (
-        <div class='posts-section' >
+        <div  >
             {
-                posts.map((posts) => <div key={posts.id} class='post'  >
-                    <h3>{posts.title}</h3>
-                    <div>{posts.description}</div>
-                    <br></br>
-                    <div>{posts.price}</div>
-                </div>)
+                postElements
             }
         </div>
     )
