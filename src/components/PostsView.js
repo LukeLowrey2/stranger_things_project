@@ -1,38 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import {fetchPosts} from '../api/index';
+import { fetchPosts } from '../api/index';
+import SinglePostView from './SinglePostView';
 
 const PostView = () => {
 
     const BASE_URL = 'https://strangers-things.herokuapp.com/api/2008-USD-RM-WEB-PT';
 
-    const [posts , setPosts] = useState([]);
+    const [posts, setPosts] = useState([]);
 
-    useEffect( async () => {
-    const thePosts = await fetchPosts();
-    console.log('this is the post variable', thePosts);
-    setPosts(thePosts.data.posts)
+    useEffect(async () => {
+        const thePosts = await fetchPosts();
+        // console.log('this is the post variable', thePosts);
+        setPosts(thePosts.data.posts)
     })
 
     let postElements = null;
 
-    if( posts && posts.length ) {
-        postElements = <div>
+    if (posts && posts.length) {
+        postElements = <div className='posts-section'>
             {
-                posts.map((posts) => <div key={posts.id}>{posts.title}</div>)
+                posts.map((post) =>
+                    <SinglePostView key={post._id} post={post} />
+                )
+
             }
         </div>
     }
 
     return (
-        <div class='posts-section' >
+        <div  >
             {
-                posts.map((posts) => <div key={posts.id} class='post'  >
-                    <h3>{posts.title}</h3>
-                    <div>{posts.description}</div>
-                    <br></br>
-                    <div>{posts.price}</div>
-                </div>)
+                postElements
             }
         </div>
     )

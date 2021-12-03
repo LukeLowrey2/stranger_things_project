@@ -3,41 +3,61 @@ import ReactDOM from 'react-dom';
 import { Route, Link, Switch } from 'react-router-dom';
 import { fetchPosts } from '../api/index';
 import PostView from './PostsView';
-import LogInForm from './LogInForm';
+import RegisterForm from './RegisterForm';
 import NewPostForm from './NewPostForm';
+import LoginForm from './LoginForm';
+import Logout from './Logout';
 
 const App = () => {
 
     return (
         <div>
 
-          <div class='header'>
+            <div className='header'>
 
                 <div>
-                    <div class='page-name'>Stranger's Things</div>
+                    <div className='page-name'>Stranger's Things</div>
                 </div>
 
-                    <div class='navigation-bar'>
-                    <button><Link to="/" class='nav-buttons'>Home</Link></button>
-
-                    <button><Link to="/LogInForm" class='nav-buttons'>Log In</Link></button>
-
-                    <button><Link to="/NewPostForm" class='nav-buttons'>New Post</Link></button>
-                            {/* only if there a local source token  */}
+                <div className='navigation-bar'>
+                    <div>
+                    <button><Link to="/" className='nav-buttons'>Home</Link></button>
                     </div>
-          </div>
+                    <br></br>
+                    <div>
+                    <button><Link to="/LoginForm" className='nav-buttons'>Log In</Link></button>
+                    </div>
+                    <br></br>
+                    <div>
+                    <button><Link to="/RegisterForm" className='nav-buttons'>Sign Up</Link></button>
+                    </div>
+                    <br></br>
+                    <div>
+                    <button><Link to="/NewPostForm" className='nav-buttons'>New Post</Link></button>
+                    </div>
+                    
+                </div>
+            </div>
 
-            {/* <Switch>
-                <Route exact path="/" component={App} />
-
-                <Route path="/LogInForm" component={LogInForm} />
+            <Switch>
+                <Route path="/RegisterForm" component={RegisterForm} />
 
                 <Route path="/NewPostForm" component={NewPostForm} />
-            </Switch> */}
-            
 
-            <div class='main' >
+                <Route path="/LoginForm" component={LoginForm} />
+            </Switch>
+
+
+            <div className='main' >
                 <PostView />
+
+            </div>
+
+            <br></br>
+
+            <div >
+                <Logout />
+
             </div>
         </div>
 
