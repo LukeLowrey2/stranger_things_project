@@ -1,30 +1,30 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import {fetchPosts} from '../api/index';
-const BASE_URL = 'https://strangers-things.herokuapp.com/api/2008-USD-RM-WEB-PT';  
+import { fetchPosts } from '../api/index';
+const BASE_URL = 'https://strangers-things.herokuapp.com/api/2008-USD-RM-WEB-PT';
 
 const SinglePostView = (props) => {
-    const { post } = props; 
+    const { post } = props;
 
     const deletePost = async () => {
         try {
 
             const response = await fetch(`${BASE_URL}/posts/${post._id}`, {
-                method: "DELETE", 
+                method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${localStorage.getItem("token")}`
                 }
             })
 
-            const data = await response.json(); 
+            const data = await response.json();
 
-            console.log('This is the deletePost function', data); 
+            console.log('This is the deletePost function', data);
 
         } catch (err) {
-            console.log(err); 
+            console.log(err);
         }
-    }
+    }    
 
     return (
         <div className='post'>
@@ -41,4 +41,4 @@ const SinglePostView = (props) => {
 
 }
 
-export default SinglePostView; 
+export default SinglePostView;

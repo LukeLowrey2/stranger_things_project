@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const BASE_URL = 'https://strangers-things.herokuapp.com/api/2008-USD-RM-WEB-PT/users/register';
 
-const RegisterForm= () => {
+const RegisterForm = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -23,7 +23,7 @@ const RegisterForm= () => {
             })
         });
 
-        const {data : {token}} = await response.json();
+        const { data: { token } } = await response.json();
 
         localStorage.setItem('token', token);
 
@@ -35,14 +35,14 @@ const RegisterForm= () => {
 
     return (
         <div className='login-form'>
-            <form onSubmit= {handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <h2>New User</h2>
-                
-                <input type='text' placeholder='Username' value={username} onChange={(event) => setUsername(event.target.value)}>    
+
+                <input type='text' placeholder='Username' value={username} onChange={(event) => setUsername(event.target.value)}>
                 </input>
                 <br></br>
                 <br></br>
-                <input type='text' placeholder='Password'value={password} onChange={(event) => setPassword(event.target.value)}>
+                <input type='text' placeholder='Password' value={password} onChange={(event) => setPassword(event.target.value)}>
                 </input>
                 <br></br>
                 <br></br>
@@ -59,7 +59,7 @@ const RegisterForm= () => {
         </div>
     )
 
-    
+
 
 }
 

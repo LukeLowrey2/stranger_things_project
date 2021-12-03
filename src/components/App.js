@@ -13,46 +13,51 @@ const App = () => {
     return (
         <div>
 
-          <div class='header'>
+            <div className='header'>
 
                 <div>
-                    <div class='page-name'>Stranger's Things</div>
+                    <div className='page-name'>Stranger's Things</div>
                 </div>
 
-                    <div class='navigation-bar'>
-                    <button><Link to="/" class='nav-buttons'>Home</Link></button>
-                    
-                    <button><Link to="/LoginForm" class='nav-buttons'>Log In</Link></button>
-
-                    <button><Link to="/RegisterForm" class='nav-buttons'>Sign Up</Link></button>
-
-                    <button><Link to="/NewPostForm" class='nav-buttons'>New Post</Link></button>
-                            {/* only if there a local source token  */}
-                    
-                    
+                <div className='navigation-bar'>
+                    <div>
+                    <button><Link to="/" className='nav-buttons'>Home</Link></button>
                     </div>
-          </div>
+                    <br></br>
+                    <div>
+                    <button><Link to="/LoginForm" className='nav-buttons'>Log In</Link></button>
+                    </div>
+                    <br></br>
+                    <div>
+                    <button><Link to="/RegisterForm" className='nav-buttons'>Sign Up</Link></button>
+                    </div>
+                    <br></br>
+                    <div>
+                    <button><Link to="/NewPostForm" className='nav-buttons'>New Post</Link></button>
+                    </div>
+                    
+                </div>
+            </div>
 
             <Switch>
-                {/* <Route exact path="/" component={App} /> */}
-
                 <Route path="/RegisterForm" component={RegisterForm} />
 
                 <Route path="/NewPostForm" component={NewPostForm} />
 
                 <Route path="/LoginForm" component={LoginForm} />
             </Switch>
-            
 
-            <div class='main' >
+
+            <div className='main' >
                 <PostView />
-                
+
             </div>
 
             <br></br>
 
             <div >
                 <Logout />
+
             </div>
         </div>
 

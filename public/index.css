@@ -7,10 +7,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  
-  /* border: solid rgb(228, 228, 228) 2px; */
   height: 20%;
-  /* margin: 10px; */
   padding: 10px;
   background-color: rgb(100, 244, 196);
   border-top-left-radius: 10px;
@@ -22,7 +19,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* background-color: rgb(255, 248, 218); */
   color: rgb(27, 59, 79);
   border-radius: 10px;
   width: 100%;
@@ -36,23 +32,21 @@ body {
 .navigation-bar{
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  /* border: solid rgb(228, 228, 228) 2px; */
+  justify-content: space-around;
   width: 50%;
   height: 70%;
-  /* margin: 10px; */
   padding: 2%;
 }
 
+
 button {
   background-color: rgb(255, 248, 218);
-  /* width: 100%; */
   height: 90%;
   margin-bottom: 10px;
-  
   border-radius: 5px;
   color: rgb(27, 59, 79);
 }
+
 .nav-buttons{
   text-decoration: none;
   font-size: 2vw;
@@ -62,6 +56,7 @@ button:hover{
   background-color: rgb(230, 250, 142);
   box-shadow: -1px 3px 1px 0px rgb(207, 91, 218);
 }
+
 .delete-button {
   height: 4vw;
   font-size: 1vw;
@@ -77,11 +72,8 @@ a:visited{
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  /* height: 60em; */
   border: solid rgb(100, 244, 196) 3px;
   background-color: rgb(164, 255, 225);
-  /* margin: 10px; */
-  /* padding: 10px; */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -91,20 +83,15 @@ a:visited{
   flex-direction: row;
   justify-content: flex-start;
   flex-flow: row wrap;
-  /* border: solid rgb(228, 228, 228) 2px; */
   width: 100%;
-  /* margin: 10px;
-  padding: 10px */
 }
 
 .post {
-  /* border: dotted rgb(228, 228, 228) 2px; */
   width: 20%;
-  /* height: 20%; */
   margin: 2%;
   padding: 1%;
   border-radius: 10px;
-  font-size: 2vw; /*font isnt changing with container size*/
+  font-size: 2vw; 
   background-color: rgb(255, 248, 218);
   box-shadow: -2px 2px 4px 0px rgb(63, 216, 165);
   color: rgb(27, 59, 79);

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 const NewPostForm = (props) => {
 
@@ -20,23 +20,23 @@ const NewPostForm = (props) => {
                 "Authorization": `Bearer ${locallySourcedToken}`
             },
             body: JSON.stringify({
-                    post: {
-                        title: title,
-                        description: description,
-                        price: price,
-                    }
-                })
-            }
+                post: {
+                    title: title,
+                    description: description,
+                    price: price,
+                }
+            })
+        }
         )
         const data = await response.json();
     }
-        
 
-    return(
+
+    return (
         <div className='new-post'>
-            <form onSubmit = {handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <h2>New Post Form</h2>
-                
+
                 <input type="text" placeholder="Title" value={title} onChange={(event) => setTitle(event.target.value)}></input>
                 <br></br>
                 <textarea type="text" placeholder="Description" value={description} onChange={(event) => setDescription(event.target.value)}></textarea>
