@@ -29,6 +29,10 @@ const NewPostForm = (props) => {
         }
         )
         const data = await response.json();
+
+        setTitle('');
+        setDescription('');
+        setPrice('');
     }
 
 

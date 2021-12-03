@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 20%;
+  padding: 10px;
+  background-color: rgb(100, 244, 196);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+
+.page-name{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: rgb(27, 59, 79);
+  border-radius: 10px;
+  width: 100%;
+  height: 70%;
+  margin: 5px;
+  padding: 10px;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.navigation-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  height: 70%;
+  padding: 2%;
+}
+
+
+button {
+  background-color: rgb(255, 248, 218);
+  height: 90%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: rgb(27, 59, 79);
+}
+
+.nav-buttons{
+  text-decoration: none;
+  font-size: 2vw;
+}
+
+button:hover{
+  background-color: rgb(230, 250, 142);
+  box-shadow: -1px 3px 1px 0px rgb(207, 91, 218);
+}
+
+.delete-button {
+  height: 4vw;
+  font-size: 1vw;
+  color: rgb(164, 27, 27);
+}
+
+a:visited{
+  color:rgb(27, 59, 79);
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: solid rgb(100, 244, 196) 3px;
+  background-color: rgb(164, 255, 225);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.posts-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.post {
+  width: 20%;
+  margin: 2%;
+  padding: 1%;
+  border-radius: 10px;
+  font-size: 2vw; 
+  background-color: rgb(255, 248, 218);
+  box-shadow: -2px 2px 4px 0px rgb(63, 216, 165);
+  color: rgb(27, 59, 79);
+}
+
+
+.login-form {
+  padding: 3%;
+  background-color: rgb(164, 255, 225);
+}
+
+.new-post {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 3%;
+  background-color: rgb(164, 255, 225);
+}
+
+textarea {
+  margin-top: 1%;
+  width: 50%;
+}
+
+.footer{
+  border: solid rgb(180, 17, 17) 2px;
+  height: 20%;
+  margin: 10px;
+  padding: 10px;
+  
+}
