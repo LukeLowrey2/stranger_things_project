@@ -63,6 +63,13 @@ button:hover{
   color: rgb(164, 27, 27);
 }
 
+
+.message-button {
+  height: 4vw;
+  font-size: 1vw;
+  color: rgb(27, 59, 79);
+}
+
 a:visited{
   color:rgb(27, 59, 79);
 }

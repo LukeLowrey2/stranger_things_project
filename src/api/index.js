@@ -7,3 +7,20 @@ export const fetchPosts = async () => {
     return data
 
 }
+
+export const fetchMessages = async () => {
+    const locallySourcedToken = localStorage.getItem("token");
+
+    const response = await fetch(`${BASE_URL}/users/me`, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${locallySourcedToken}`,
+          }
+    });
+
+
+
+    const data = await response.json();
+    return data
+
+}

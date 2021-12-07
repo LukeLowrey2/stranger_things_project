@@ -7,6 +7,7 @@ import RegisterForm from './RegisterForm';
 import NewPostForm from './NewPostForm';
 import LoginForm from './LoginForm';
 import Logout from './Logout';
+import MessageView from './MessageView';
 
 const App = () => {
 
@@ -35,6 +36,10 @@ const App = () => {
                     <div>
                     <button><Link to="/NewPostForm" className='nav-buttons'>New Post</Link></button>
                     </div>
+                    <br></br>
+                    <div>
+                    <button><Link to="/MessageView" className='nav-buttons'>Messages</Link></button>
+                    </div>
                     
                 </div>
             </div>
@@ -45,6 +50,8 @@ const App = () => {
                 <Route path="/NewPostForm" component={NewPostForm} />
 
                 <Route path="/LoginForm" component={LoginForm} />
+
+                <Route path="/MessageView" component={MessageView} />
             </Switch>
 
 
